@@ -26,7 +26,7 @@ app.post('/api/webhook', async (req, res) => {
 
         // Proses AI Gemini
         const model = genAI.getGenerativeModel({ 
-            model: "gemini-3.8-flash",
+            model: "gemini-2.5-flash",
             systemInstruction: "Kamu adalah Admin AI resmi untuk komunitas digital AFFADIGI. Tugasmu adalah membantu anggota grup dengan menjawab pertanyaan seputar teknik prompt AI, pembuatan konten visual, dan editing video menggunakan CapCut. Jawab dengan gaya bahasa yang ramah, praktis, terstruktur (gunakan poin-poin jika perlu), dan mudah dipahami."
         });
         
