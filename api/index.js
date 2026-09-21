@@ -14,8 +14,7 @@ const TELEGRAM_API_URL = `https://api.telegram.org/bot${TELEGRAM_TOKEN}`;
 const genAI = new GoogleGenerativeAI(GEMINI_API_KEY);
 
 // Endpoint Webhook
-app.post('/webhook', async (req, res) => {
-    // Beri respons 200 OK ke Telegram agar tidak dikirim ulang
+app.post('/api/webhook', async (req, res) => {    // Beri respons 200 OK ke Telegram agar tidak dikirim ulang
     res.sendStatus(200);
 
     const message = req.body.message;
