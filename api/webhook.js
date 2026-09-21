@@ -14,7 +14,7 @@ const TELEGRAM_API_URL = `https://api.telegram.org/bot${TELEGRAM_TOKEN}`;
 const genAI = new GoogleGenerativeAI(GEMINI_API_KEY);
 
 // Vercel Serverless Route (Menangkap semua request yang masuk)
-app.post('*', async (req, res) => {
+app.post('/api/webhook', async (req, res) => {
     // 1. Kirim respons 200 OK ke Telegram secepatnya agar Telegram tidak mengulang pengiriman pesan
     res.sendStatus(200);
 
